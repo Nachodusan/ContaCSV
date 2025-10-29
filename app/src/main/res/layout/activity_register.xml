@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F5F6FA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Logo de la app" />
+
+        <!-- Título -->
+        <TextView
+            android:text="Crear cuenta"
+            android:textColor="#1A237E"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Regístrate para continuar"
+            android:textColor="#555555"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Tarjeta del formulario -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/bg_card_soft"
+            android:elevation="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Nombre de usuario -->
+            <EditText
+                android:id="@+id/etUsername"
+                android:hint="Nombre de usuario"
+                android:drawableStart="@android:drawable/ic_menu_myplaces"
+                android:inputType="textPersonName|textNoSuggestions"
+                android:autofillHints="username"
+                android:backgroundTint="#3F51B5"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Nombre completo -->
+            <EditText
+                android:id="@+id/etFullName"
+                android:hint="Nombre completo"
+                android:drawableStart="@android:drawable/ic_menu_edit"
+                android:inputType="textPersonName|textCapWords|textNoSuggestions"
+                android:backgroundTint="#3F51B5"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Teléfono -->
+            <EditText
+                android:id="@+id/etPhone"
+                android:hint="Teléfono (10 dígitos)"
+                android:drawableStart="@android:drawable/ic_menu_call"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:autofillHints="phoneNumber"
+                android:backgroundTint="#3F51B5"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Sección -->
+            <EditText
+                android:id="@+id/etSection"
+                android:hint="Sección"
+                android:drawableStart="@android:drawable/ic_menu_sort_by_size"
+                android:inputType="text|textNoSuggestions"
+                android:backgroundTint="#3F51B5"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Correo (REQUERIDO) -->
+            <EditText
+                android:id="@+id/etEmail"
+                android:hint="Correo electrónico"
+                android:drawableStart="@android:drawable/ic_dialog_email"
+                android:inputType="textEmailAddress|textNoSuggestions"
+                android:autofillHints="emailAddress"
+                android:backgroundTint="#3F51B5"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- Contraseña (REQUERIDO) -->
+            <EditText
+                android:id="@+id/etPassword"
+                android:hint="Contraseña"
+                android:drawableStart="@android:drawable/ic_lock_lock"
+                android:inputType="textPassword"
+                android:autofillHints="password"
+                android:backgroundTint="#3F51B5"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext" />
+
+            <!-- Confirmar contraseña (NUEVO) -->
+            <EditText
+                android:id="@+id/etConfirmPassword"
+                android:hint="Confirmar contraseña"
+                android:drawableStart="@android:drawable/ic_lock_lock"
+                android:inputType="textPassword"
+                android:backgroundTint="#3F51B5"
+                android:textColorHint="#888888"
+                android:padding="12dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone" />
+
+            <Button
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Crear cuenta"
+                android:backgroundTint="#3F51B5"
+                android:textColor="@android:color/white" />
+
+
+            <!-- Progreso y estado -->
+            <ProgressBar
+                android:id="@+id/progress"
+                android:visibility="gone"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:text=""
+                android:textColor="#666666"
+                android:textSize="13sp"
+                android:layout_marginTop="6dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- Volver a iniciar sesión -->
+        <TextView
+            android:id="@+id/tvGoLogin"
+            android:text="¿Ya tienes cuenta? Inicia sesión"
+            android:textColor="#3F51B5"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Copyright -->
+        <TextView
+            android:text="© 2025 PersonShot"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ====================== -->
+    <!-- 🔐 PERMISOS GENERALES -->
+    <!-- ====================== -->
+
+    <!-- Escritura solo para SDK <= 28 -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- Internet / Red (Supabase, mapas, etc.) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Ubicación (si usas mapas/zonas) -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- ====================== -->
+    <!-- 💡 APLICACIÓN -->
+    <!-- ====================== -->
+    <application
+        android:name="com.example.contacsv10.App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ContaCSV10"
+        tools:targetApi="36">
+
+        <!-- ====================== -->
+        <!-- 🚀 INICIO (LOGIN/BIENVENIDA) -->
+        <!-- ====================== -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 👤 REGISTRO -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- ✅ ÉXITO DE REGISTRO -->
+        <activity
+            android:name=".SuccessActivity"
+            android:exported="false" />
+
+        <!-- 🧭 PRINCIPAL -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- 🗺️ ZONAS / MAPA -->
+        <activity
+            android:name=".ZoneActivity"
+            android:exported="false" />
+
+        <!-- 👤 PERFIL -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

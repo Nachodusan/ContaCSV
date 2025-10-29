@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F6FA">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 🟣 LOGO -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="167dp"
+            android:layout_height="161dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <!-- 👋 TÍTULO -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="Bienvenido líder"
+            android:textColor="#1A237E"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:text="Inicia sesión para continuar"
+            android:textColor="#555555"
+            android:textSize="15sp"
+            android:layout_marginBottom="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 🧭 TARJETA DEL LOGIN -->
+        <LinearLayout
+            android:id="@+id/cardLogin"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/bg_card_soft"
+            android:elevation="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Correo -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEmail"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo"
+                    android:inputType="textEmailAddress"
+                    android:autofillHints="emailAddress"
+                    android:importantForAutofill="yes"
+                    android:imeOptions="actionNext"
+                    android:padding="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Contraseña con toggle -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPassword"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:endIconMode="password_toggle"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:autofillHints="password"
+                    android:importantForAutofill="yes"
+                    android:imeOptions="actionDone"
+                    android:padding="12dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 🔵 Botón principal -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:text="Entrar"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#3F51B5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- ⏳ Progreso + estado -->
+            <ProgressBar
+                android:id="@+id/progress"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#666666"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- ⚪ Texto de acción alternativa -->
+        <TextView
+            android:id="@+id/tvContinue"
+            android:text="¿No tienes cuenta? Crear una nueva"
+            android:textColor="#3F51B5"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="24dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Pie -->
+        <TextView
+            android:id="@+id/tvFooter"
+            android:text="© 2025 PersonShot"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

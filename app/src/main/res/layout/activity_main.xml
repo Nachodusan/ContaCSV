@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 🔝 Margen superior violeta para evitar chocar con la barra del sistema -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#2196F3" />
+
+    <!-- 🟣 Toolbar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#2196F3"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBackToZones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Volver a Zonas"
+            android:src="@android:drawable/ic_menu_revert"
+            android:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/tvZoneTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Zona"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Espaciador empuja la fecha a la derecha -->
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <!-- 📅 Fecha alineada a la derecha -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22/10/2025"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 📋 Contenido del formulario -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etName"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:hint="Número (5512345678 o +525512345678)"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/etSection"
+                android:hint="Sección"
+                android:inputType="textCapWords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+
+
+
+            <!-- Pregunta 1 -->
+            <TextView
+                android:text="¿Quiere asistir a la asamblea?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/rgAsamblea"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbAsambleaSi"
+                    android:text="Sí" />
+
+                <RadioButton
+                    android:id="@+id/rbAsambleaNo"
+                    android:text="No"
+                    android:layout_marginStart="16dp" />
+            </RadioGroup>
+
+            <!-- Pregunta 2 -->
+            <TextView
+                android:text="¿Está interesado en crear un grupo de encuentro?"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/rgGrupo"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rbGrupoSi"
+                    android:text="Sí" />
+
+                <RadioButton
+                    android:id="@+id/rbGrupoNo"
+                    android:text="No"
+                    android:layout_marginStart="16dp" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:text="Agregar"
+                android:backgroundTint="#2196F3"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" />
+
+            <!-- Añade dentro del layout principal -->
+            <Button
+                android:id="@+id/btnSyncSupabase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subir"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:backgroundTint="#2196F3"/>
+
+
+
+            <Button
+                android:id="@+id/btnExport"
+                android:text="Exportar a Excel (CSV)"
+                android:backgroundTint="#2196F3"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" />
+
+            <ListView
+                android:id="@+id/lvList"
+                android:layout_width="match_parent"
+                android:layout_height="205dp"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#F5F6FA"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Tarjeta centrada -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/bg_card_soft"
+        android:elevation="8dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Check grande -->
+        <ImageView
+            android:src="@android:drawable/checkbox_on_background"
+            android:contentDescription="Registro exitoso"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Título -->
+        <TextView
+            android:text="¡Registro exitoso!"
+            android:textColor="#1A237E"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:text="Ya puedes iniciar tu cuenta"
+            android:textColor="#555555"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- 🔵 Botón único -->
+        <Button
+            android:id="@+id/btnGoLogin"
+            android:text="Iniciar sesión"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3F51B5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- Pie -->
+    <TextView
+        android:text="© 2025 PersonShot"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:layout_marginTop="36dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

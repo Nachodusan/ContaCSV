@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Texto del contacto -->
+    <ImageButton
+        android:id="@+id/btnDelete"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Eliminar"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        android:tint="#F44336" />
+
+    <TextView
+        android:id="@+id/tvPerson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Nombre — 5512345678 • Asamblea: Sí • Grupo: No • Fecha: 22/10/2025"
+        android:textSize="15sp"
+        android:textColor="#212121" />
+
+    <!-- Botón X de eliminar -->
+</LinearLayout>
