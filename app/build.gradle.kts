@@ -60,7 +60,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6")
 
     // Supabase (desde Maven Central, sin JitPack)
-    implementation(platform("io.github.jan-tennert.supabase:bom:2.4.1"))
+    implementation(platform("io.github.jan-tennert.supabase:bom:2.5.0"))
+
     implementation("io.github.jan-tennert.supabase:gotrue-kt")     // Auth
     implementation("io.github.jan-tennert.supabase:postgrest-kt")  // Tablas
 
